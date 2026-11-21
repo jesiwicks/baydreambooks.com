@@ -89,9 +89,17 @@ Workflow rules: chat reviews Claude Code's proposals, Claude Code executes. Stop
 
 ---
 
+## CLOUDFLARE SETUP (done November 21, 2026)
+- Account: the jesiwicks Cloudflare account (same as jesiwicks.com)
+- Worker: `baydreambooks`, connected to this repo via Workers Builds; build `npm run build`, deploy `npx wrangler deploy`, branch `main`
+- Domain: registered at Namecheap, nameservers `keaton.ns.cloudflare.com` and `paris.ns.cloudflare.com`, zone active on Cloudflare (Free plan)
+- Custom Domains on the Worker: `baydreambooks.com` and `www.baydreambooks.com`
+- Redirect Rule `www to root`: `https://www.*` -> `https://${1}`, 301, query string preserved
+- No email on this domain; leftover Namecheap forwarding MX/TXT records in DNS are unused
+
+---
+
 ## PENDING TASKS
-1. Connect this repo to a Cloudflare Worker (Workers & Pages > Settings > Builds), build command `npm run build`
-2. Put baydreambooks.com on Cloudflare and add it as a Custom Domain on the Worker
-3. Build the sheet-to-pages step in `scripts/build.mjs`
-4. Build the home page and book entry template from the approved wireframe
-5. Google Search Console verification and sitemap submission
+1. Build the home page and book entry template from the approved wireframe
+2. Build the sheet-to-pages step in `scripts/build.mjs`
+3. Google Search Console verification and sitemap submission
