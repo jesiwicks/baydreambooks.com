@@ -1,0 +1,3 @@
+# Cloudflare routing rules
+# Format: /from /to status
+# Book entry pages will live at /books/<slug>/ and need no rules here.

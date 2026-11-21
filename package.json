@@ -1,0 +1,18 @@
+{
+  "name": "baydreambooks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "baydreambooks.com - Bionic Lettering editions of public domain classics from Baydream Books",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.166.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
